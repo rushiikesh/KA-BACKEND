@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - rm -rf .git/
+  build:
+    commands:
+      - sam build
+  # post_build:
+  #   commands:
+  #     - sam deploy --config-env test --no-progressbar --capabilities CAPABILITY_IAM
+      
