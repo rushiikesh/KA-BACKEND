@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
             const response = await service.insertAddress(parameter);
             console.error(JSON.stringify({ message: response}));
             return getResponseObject(true, HTTP_CODE.SUCCESS, { isValid: true }, response);
-        } else {
+        } else if(parameter.reqtype == 'update'){
         const response = await service.updateAddress(parameter);
         console.log(JSON.stringify({ message: response}));
         return getResponseObject(true, HTTP_CODE.SUCCESS, { isValid: true }, response);

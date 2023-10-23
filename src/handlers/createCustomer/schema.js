@@ -2,7 +2,7 @@ const {Joi} = require('common-layer/utils/packageExports.js');
 
 let schema = Joi.object().keys({
     firstName: Joi.string().required(),
-    lastLame: Joi.string().required(),
+    lastName: Joi.string().required(),
     mobile: Joi.number().required(),
     email: Joi.string().required(),
     session: Joi.string().required(),

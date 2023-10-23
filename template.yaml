@@ -116,7 +116,7 @@ Resources:
     Properties:
       CodeUri: src/handlers/manageAddress
       Handler: index.handler
-      FunctionName: envStackname-test
+      FunctionName: manageAddress
       Description: 'A lambda to test.'
       Role: !GetAtt lambdaExecutionRole.Arn
       Events:

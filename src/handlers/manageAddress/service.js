@@ -30,10 +30,10 @@ exports.updateAddress = async(parameter)=>{
    
     try{
         let query = 
-        'update Address set userID = ?, line1  = ?, city = ?, state = ?, pincode = ?, u_dt = ?, isDefault = ?';
+        'update Address set userID = ?, line1  = ?, city = ?, state = ?, pincode = ?, u_dt = ?, isDefault = ? where userID=?';
         let result = await sequelize.query(query, {
             replacements: [parameter.userID, parameter.line1, parameter.city, 
-                parameter.state,parameter.pincode, sysdate, parameter.isDefault],
+                parameter.state,parameter.pincode, sysdate, parameter.isDefault, parameter.userID],
             type: QueryTypes.UPDATE,
             
         });
